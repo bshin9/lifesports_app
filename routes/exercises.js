@@ -41,22 +41,27 @@ router.post("/add", async (req, res) => {
 // GET: /:id
 // ========================================
 router.get("/:id", async (req, res) => {
-  const exercise = await Exercise.findById(req.params.id);
+  try {
+    const exercise = await Exercise.findById(req.params.id);
 
-  if (!exercise)
-    return res.status(404).send("Exercise has been deleted by the user");
-
-  res.send(exercise);
+    res.send(exercise);
+  } catch {
+    if (!exercise)
+      return res.status(404).send("Exercise has been deleted by the user");
+  }
 });
 // 4. delete a specfic exercise log
 // DELETE: /:id
 // ========================================
 router.delete("/:id", async (req, res) => {
-  const exercise = await Exercise.findByIdAndRemove(req.params.id);
+  try {
+    const exercise = await Exercise.findByIdAndRemove(req.params.id);
 
-  if (!exercise) return res.status(404).send("Wrong user ID and cannot delete");
-
-  res.send(exercise);
+    res.send(exercise);
+  } catch {
+    if (!exercise)
+      return res.status(404).send("Wrong user ID and cannot delete");
+  }
 });
 // 5. retrieve a specific exercise log and update it
 // with information sent by client on req body
@@ -68,10 +73,9 @@ router.put("/update/:id", async (req, res) => {
 
     exercise.set(req.body);
 
-    const result = await exercise.save()
+    const result = await exercise.save();
 
     res.send(result);
-
   } catch (err) {
     return err;
   }
