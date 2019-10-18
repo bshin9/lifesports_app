@@ -1,38 +1,22 @@
 
-# LifeSports Challlenge and Hackathon
+# LifeSports Challlenge 
 
 ### About Us
 
-
-### Build Components
+LifeSports is an non-profit organization dedicated to helping young students to stay on the path to success. We've created this app using React-App and then connecting it to our backend database using MongoDB.
 
 ### Usage
 
 ```js
+Run $ npm install in terminal
+```
 
+```js
+Run $ npm start to start app
 ```
 
 #### Challenge Instructions
 
-The challenge requirements for this week are as follows:
+Our challenge was to create a working CRUD functionality to where the user can create, edit, and delete their exercises they posted. We had to link our React App to the backend, MongoDB. We did this by inputting the MongoDB username and password into our .env and using a process.env to hide our information. Then we created a cluster on Atlas and an app on heroku. The point of this was to enable a link between the two platforms and deploy our site this way.
 
-1. Complete the API endpoints in the LifeSports Express server. Note that all MongoDB functions must use the mongoose data model that is provided
-
-2. Refactor this code to work with your MongoDB Atlas database. You should update your .env file so that you can use either mongodb locally on on Atlas
-
-3. Deploy your app to Heroku
-
-4. Submit the link to your professionally composed GitHub acct with the Link to your working app by Monday, Oct 21 at 5pm. The github acct should have the link to your live heroku app
-
-The APIs will be tested and the github accts reviewed to determine the number of points earned n the challenge submission
-
-#### Hackathon Challenge
-
-1. Use the working version of your LifeSports app from the Challenge to go the next level!
-
-2. Be creative! Develop a new and more engaging UI for your 'workout tracker' and deliver an app that will captivate the LifeSports' coaches!
-
-3. Each submission should include an updated UI, with updates, as required, to the mongoose data model, api server and integrations. All Submissions must be deployed with a professionally composed github repo and a live working app on Heroku
-
-4. The deadline for all submissions in Thursday, Oct 24 at 5pm
 
