@@ -6,9 +6,11 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-
+// stating the requirments to run our application
+// setting the variables and securing sensitive data within process.env
 const app = express();
 const port = process.env.PORT || 5000;
+// put our Atlas connection into our .env to secure our server
 let uri = process.env.ATLAS_URI;
 
 // register middleware

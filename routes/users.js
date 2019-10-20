@@ -14,11 +14,11 @@ let User = require("../models/user.model");
 // GET: /
 // ========================================
 router.get("/", async (req, res) => {
+  // using try and catch statements here as well but for users
   try {
     const users = await User.find();
     res.send(users);
-  } catch (e) {
-    console.log(e);
+  } catch {
     res.send("Cannot find collection");
   }
 });
@@ -27,13 +27,15 @@ router.get("/", async (req, res) => {
 // POST /add
 // ========================================
 router.post("/add", async (req, res) => {
+  // idea is similiar to exercise
+  // creating a new User and then saving it
   try {
     let users = new User(req.body);
     users = await users.save();
 
     res.send(users);
-  } catch(error) {
-    return error;
+  } catch {
+    res.send("Cannot post new user");
   }
 });
 
