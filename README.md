@@ -14,7 +14,7 @@ Run `$ npm start` to start app
 ```
 
 ### Layout
-![Node](Readmesports.pdf)
+![Node](https://github.com/bshin9/lifesports_app/blob/master/Images/Readmesports.pdf)
 
 #### Challenge Instructions
 
