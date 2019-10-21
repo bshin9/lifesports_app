@@ -38,6 +38,7 @@ connection.once('open', () => {
 // register api catalogue
 const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
+const playerRouter = require('./routes/player');
 
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);

@@ -16,16 +16,4 @@ const userSchema = new Schema({
 
 const User = mongoose.model('User', userSchema);
 
-// async function getUser() {
-//   return await User
-//   .select({ type: 1 });
-// }
-
-// async function run() {
-//   const users = await getUser();
-//   console.log(users);
-// }
-
-// run();
-
 module.exports = User;
