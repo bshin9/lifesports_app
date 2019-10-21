@@ -14,11 +14,7 @@ Run `$ npm start` to start app
 ```
 
 ### Layout
-<<<<<<< HEAD
 ![Readmesports.pdf](https://github.com/bshin9/lifesports_app/files/3748208/Readmesports.pdf)
-=======
-<img width="1440" alt="Screen Shot 2019-10-20 at 2 56 30 PM" src="https://user-images.githubusercontent.com/52217063/67164555-e57f5400-f349-11e9-88ab-82bbc846ef20.png">
->>>>>>> 370d8fe041abe1c266cdcce76a64cdb1daabee79
 
 #### Challenge Instructions
 
