@@ -20,9 +20,8 @@ router.get("/", async (req, res) => {
   try {
     const exercise = await Exercise.find();
     res.send(exercise);
-  } catch (e) {
-    console.log(e);
-    res.send("Cannot find collection");
+  } catch {
+    res.send(404);
   }
 });
 
@@ -36,7 +35,7 @@ router.post("/add", async (req, res) => {
 
     res.send(exercise);
   } catch {
-    return error;
+    res.send(404);
   }
 });
 // 3. retrieve a specfic exercise log
@@ -50,8 +49,7 @@ router.get("/:id", async (req, res) => {
     res.send(exercise);
   } catch {
     // we're going to catch the error if exercise is not equal to the ID we are trying to locate
-    if (!exercise)
-      return res.status(404).send("Exercise has been deleted by the user");
+    res.send(404);
   }
 });
 // 4. delete a specfic exercise log
@@ -64,8 +62,7 @@ router.delete("/:id", async (req, res) => {
 
     res.send(exercise);
   } catch {
-    if (!exercise)
-      return res.status(404).send("Wrong user ID and cannot delete");
+    res.send(404);
   }
 });
 // 5. retrieve a specific exercise log and update it
@@ -81,8 +78,8 @@ router.put("/update/:id", async (req, res) => {
     const result = await exercise.save();
 
     res.send(result);
-  } catch (err) {
-    return err;
+  } catch {
+    res.send(404);
   }
 });
 

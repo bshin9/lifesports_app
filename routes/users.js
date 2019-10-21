@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
     const users = await User.find();
     res.send(users);
   } catch {
-    res.send("Cannot find collection");
+    res.send(404);
   }
 });
 
@@ -35,7 +35,7 @@ router.post("/add", async (req, res) => {
 
     res.send(users);
   } catch {
-    res.send("Cannot post new user");
+    res.send(404);
   }
 });
 
