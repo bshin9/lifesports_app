@@ -58,7 +58,7 @@ router.get("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     // findByAndRemove is going to find the id and remove the desired exercise log
-    const exercise = await Exercise.findByIdAndRemove(req.params.id);
+    const exercise = await Exercise.findByIdAndDelete(req.params.id);
 
     res.send(exercise);
   } catch {
