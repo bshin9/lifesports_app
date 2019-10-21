@@ -35,7 +35,7 @@ router.post("/add", async (req, res) => {
 
     res.send(users);
   } catch {
-    res.send(404);
+    res.send(500);
   }
 });
 

@@ -35,7 +35,7 @@ router.post("/add", async (req, res) => {
 
     res.send(exercise);
   } catch {
-    res.send(404);
+    res.send(500);
   }
 });
 // 3. retrieve a specfic exercise log
