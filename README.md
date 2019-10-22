@@ -22,7 +22,7 @@ Our challenge was to create a working CRUD functionality to where the user can c
 
 ## Authors
 
-This project was developed by Brian Shin, Lovepreet, and Juan. We appreciate any feedback and praise as well. 
+This project was developed by Brian Shin. I appreciate any feedback and praise as well. 
 
 ## License
 

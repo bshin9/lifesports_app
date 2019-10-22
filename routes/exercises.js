@@ -15,7 +15,7 @@ let Exercise = require("../models/exercise.model");
 // ========================================
 router.get("/", async (req, res) => {
   // using async await promises because we want the endpoint to return the exercise data
-  // try statements can come with catch clause that just means that when the condition 
+  // try statements can come with catch clause that just means that when the condition
   // in the try block is not fulfilled then the catch will handle the error
   try {
     const exercise = await Exercise.find();
@@ -73,7 +73,7 @@ router.put("/update/:id", async (req, res) => {
   try {
     const exercise = await Exercise.findById(req.params.id);
     // the set allows us to edit our exercises through the req.body
-    exercise.set(req.body); 
+    exercise.set(req.body);
     // we want to send result back and save the exercise information
     const result = await exercise.save();
 
